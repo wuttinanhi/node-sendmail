@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  nodesendmail:
+    image: nodesendmail
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - SERVICE=gmail
+      - SENDER_EMAIL=
+      - SENDER_PASSWORD=
+      - RECIEVER_EMAIL=
+      - SUBJECT=Hello from Node
+      - CONTENT=<h1>Hello</h1><p>This is content</p><h5>Goodbye!</h5>
